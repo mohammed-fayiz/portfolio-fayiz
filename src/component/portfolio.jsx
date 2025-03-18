@@ -151,7 +151,6 @@ export default function Portfolio(){
       var element=document.body
       element.classList.toggle("dark-mode");
     };
-    console.log(checked)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
