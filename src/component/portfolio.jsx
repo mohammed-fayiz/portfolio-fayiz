@@ -43,7 +43,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { GitHub } from '@mui/icons-material';
 
-const skillArray=['C','JavaScript','CSS3','HTML5','React.JS','Redux','BootStrap','Material UI','Motion Framer','Node.JS','Express.JS','MongoDB','Git','GitHub','Vercel','Render','multer','Toastify','nodemon','CORS','Axios']
+const skillArray=['C','JavaScript','CSS3','HTML5','React.JS','BootStrap','Material UI','Motion Framer','Node.JS','Express.JS','MongoDB','Git','GitHub','Vercel','Render']
 const project1='A centralized platform for both wholesale andretail coffee sales, connecting coffee farmers directly with buyers. The platform will offer services to help farmers improve their coffee products through farming tips, quality control, and access to market data. Additionally, the system will manage the collection of coffee beans directly from farmers locations, ensuring a streamlined process. Build using React.js for front end designed using Material UI, database managed by mongoDB (NoSQL) and backend using Node.js and expressJS '
 const project2='Static website based on design image of vintage vehicle models of Mercedez HTML and CSS'
 const project3='static website Clone for Camerin Folks private limited- A job oriented training institution build using HTML5 and CSS3 only'
@@ -151,7 +151,6 @@ export default function Portfolio(){
       var element=document.body
       element.classList.toggle("dark-mode");
     };
-    console.log(checked)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
