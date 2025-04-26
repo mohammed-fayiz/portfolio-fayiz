@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/images/image1.png';
 import image2 from '../assets/images/degree-certi.jpg'
 import image3 from '../assets/images/resume_fayiz.jpg'
-import resume_pdf from '../assets/docs/Mohammed_Fayiz(mern).pdf'
+import resume_pdf from '../assets/docs/Mohammed_Fayiz.pdf'
 
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { motion } from 'framer-motion';
