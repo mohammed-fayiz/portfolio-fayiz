@@ -3,11 +3,12 @@ import './styles.css'
 import * as React from 'react';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import Marquee from "react-fast-marquee"
 
 import image1 from '../assets/images/image1.png';
 import image2 from '../assets/images/degree-certi.jpg'
 import image3 from '../assets/images/resume_fayiz.jpg'
-import resume_pdf from '../assets/docs/Mohammed_Fayiz.pdf'
+import resume_pdf from '../assets/docs/render_resume_Fayiz.pdf'
 
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { motion } from 'framer-motion';
@@ -42,8 +43,31 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { GitHub } from '@mui/icons-material';
+const clogo=<img width="24" height="24" src="https://img.icons8.com/color/24/c-programming.png" alt="c-programming"/>
+const jslogo=<img width="24" height="24" src="https://img.icons8.com/fluency/24/javascript.png" alt="javascript"/>
+const htmllogo=<img width="25" height="25" src="https://img.icons8.com/color/24/html-5--v1.png" alt="html-5--v1"/>
+const csslogo=<img width="24" height="24" src="https://img.icons8.com/color/24/css3.png" alt="css3"/>
+const reactlogo=<img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"/>
+const reduxlogo=<img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-redux-an-open-source-javascript-library-for-managing-application-state-logo-color-tal-revivo.png" alt="external-redux-an-open-source-javascript-library-for-managing-application-state-logo-color-tal-revivo"/>
+const bslogo=<img width="24" height="24" src="https://img.icons8.com/color/24/bootstrap--v2.png" alt="bootstrap--v2"/>
+const muilogo=<img width="24" height="24" src="https://img.icons8.com/color/24/material-ui.png" alt="material-ui"/>
+const mflogo=<img width="25" height="25" src="https://user-images.githubusercontent.com/7850794/164965509-2a8dc49e-2ed7-4243-a2c9-481b03bbc31a.png" alt="css3"/>
+const nodelogo=<img width="24" height="24" src="https://img.icons8.com/color/24/nodejs.png" alt="nodejs"/>
+const expresslogo=<img width="24" height="24" src="https://img.icons8.com/officel/80/express-js.png" alt="express-js"/>
+const mongologo=<img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png" alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo"/>
+const gitlogo=<img width="24" height="24" src="https://img.icons8.com/ios-filled/24/git.png" alt="git"/>
+const githublogo=<img width="24" height="24" src="https://img.icons8.com/ios-filled/24/github.png" alt="github"/>
+const vercellogo=<img width="24" height="24" src="https://pipedream.com/s.v0/app_XaLh2x/logo/orig" alt="nodejs"/>
+const renderlogo=<img width="24" height="24" src="https://camo.githubusercontent.com/25d25cd0312f9e81b653fbdd33d2b04c49f03dede7fe5c89d4aeabb9a83ec739/68747470733a2f2f63646e2e73616e6974792e696f2f696d616765732f3334656e74386c792f70726f64756374696f6e2f656333376133363630373034653166613262343234366339613031616233346531343531393461642d383234783832342e706e67" alt="git"/>
+const nodemonlogo=<img width="24" height="24" src="https://user-images.githubusercontent.com/13700/35731649-652807e8-080e-11e8-88fd-1b2f6d553b2d.png" alt="git"/> 
+const toastlogo=""
+const multerlogo=""
+const corslogo=""
+const axioslogo="" 
 
-const skillArray=['C','JavaScript','CSS3','HTML5','React.JS','BootStrap','Material UI','Motion Framer','Node.JS','Express.JS','MongoDB','Git','GitHub','Vercel','Render']
+
+
+const skillArray=[{logoImg:clogo,logoName:'c'},{logoImg:jslogo,logoName:'JavaScript'},{logoImg:csslogo,logoName:'CSS3'},{logoImg:htmllogo,logoName:'HTML5'},{logoImg:reactlogo,logoName:'React.JS'},{logoImg:reduxlogo,logoName:'Redux'},{logoImg:bslogo,logoName:'BootStrap'},{logoImg:muilogo,logoName:'Material UI'},{logoImg:mflogo,logoName:'Motion Framer'},{logoImg:nodelogo,logoName:'Node.JS'},{logoImg:expresslogo,logoName:'Express.JS'},{logoImg:mongologo,logoName:'MongoDB'},{logoImg:gitlogo,logoName:'Git'},{logoImg:githublogo,logoName:'GitHub'},{logoImg:vercellogo,logoName:'Vercel'},{logoImg:renderlogo,logoName:'Render'},{logoImg:multerlogo,logoName:'multer'},{logoImg:toastlogo,logoName:'Toastify'},{logoImg:nodemonlogo,logoName:'nodemon'},{logoImg:corslogo,logoName:'CORS'},{logoImg:axioslogo,logoName:'Axios'}]
 const project1='A centralized platform for both wholesale andretail coffee sales, connecting coffee farmers directly with buyers. The platform will offer services to help farmers improve their coffee products through farming tips, quality control, and access to market data. Additionally, the system will manage the collection of coffee beans directly from farmers locations, ensuring a streamlined process. Build using React.js for front end designed using Material UI, database managed by mongoDB (NoSQL) and backend using Node.js and expressJS '
 const project2='Static website based on design image of vintage vehicle models of Mercedez HTML and CSS'
 const project3='static website Clone for Camerin Folks private limited- A job oriented training institution build using HTML5 and CSS3 only'
@@ -151,6 +175,7 @@ export default function Portfolio(){
       var element=document.body
       element.classList.toggle("dark-mode");
     };
+    console.log(checked)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -195,7 +220,7 @@ export default function Portfolio(){
                         display: { xs: 'none', md: 'flex' },
                         fontWeight: 700,
                         color: 'inherit',
-                        textDecoration: 'none',
+                        textDecoration: 'none', 
                         }}
                     >
                         <h1 id='namer' style={{fontWeight:'400'}}>Port <strong style={{color:'violet',fontWeight:'800'}}>folio</strong></h1>
@@ -467,15 +492,23 @@ export default function Portfolio(){
                 
                </div>
                <div className="animator-container" id='skills'>
-                <h1 style={{color:'white',borderBottom:'1px solid white',padding:'10px',marginBottom:'20px'}}>Skills.</h1>
-                <div className="animator-container-div">
+                <h1 style={{fontWeight:'800',borderBottom:'1px solid white',padding:'10px',marginBottom:'20px'}}>Skills.</h1>
+                {/* <div className="animator-container-div">
                 {skillArray.map(it=>(
                   <motion.div className="animater" key={it}
                   >
                       {it}
                   </motion.div>
-                ))}</div>
-               
+                ))}</div> */}
+               <Marquee>
+               {skillArray.map((it,index)=>(
+                  <motion.div className="animater" style={checked==true?{backgroundColor:'black',color:'white'}:{color:'black'}} key={index}
+                  >
+                      {it.logoImg}
+                      {it.logoName}
+                  </motion.div>
+                ))}
+               </Marquee>
                </div>
                <div className="project-div" id='projects'>
                 <h1>Projects.</h1>
