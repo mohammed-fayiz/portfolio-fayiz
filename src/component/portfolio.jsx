@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Marquee from "react-fast-marquee"
+import { Analytics } from "@vercel/analytics/react"
 
 import image1 from '../assets/images/image1.png';
 import image2 from '../assets/images/degree-certi.jpg'
@@ -43,6 +44,7 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import { GitHub } from '@mui/icons-material';
+
 const clogo=<img width="24" height="24" src="https://img.icons8.com/color/24/c-programming.png" alt="c-programming"/>
 const jslogo=<img width="24" height="24" src="https://img.icons8.com/fluency/24/javascript.png" alt="javascript"/>
 const htmllogo=<img width="25" height="25" src="https://img.icons8.com/color/24/html-5--v1.png" alt="html-5--v1"/>
@@ -427,6 +429,7 @@ export default function Portfolio(){
                 </p>
                </div>
                <div className="education-section"  id='education'>
+                <Analytics/>
                 <h1 style={{borderBottom:'1px solid',padding:'10px'}} >Education.</h1>
                 <hr style={checked==false?{backgroundColor:'white'}:{backgroundColor:'black'}} />
                <Accordion style={checked==false?{backgroundColor:'white',color:'black'}:{backgroundColor:'black',color:'white',border:'1px solid',borderColor:'black'}} >
