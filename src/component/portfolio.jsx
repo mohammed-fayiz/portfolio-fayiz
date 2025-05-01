@@ -617,9 +617,9 @@ export default function Portfolio(){
                     <div className="msg-box">
                       <form action="mailto:mhd02fayiz@gmail.com" method="post" enctype="text/plain" className='msg-form'>
                         <h1 style={{color:'white'}}>Send Message</h1>
-                        <input type="text" name='sendname' placeholder='Enter your Name' onChange={handleData} />
-                        <input type="text" name="subject" placeholder='enter Subject' onChange={handleData}/>
-                        <textarea name="content" placeholder='Message Content' onChange={handleData}></textarea>
+                        <input type="text" name='sendname' placeholder='Enter your Name' autoComplete='off' onChange={handleData} />
+                        <input type="text" name="subject" placeholder='enter Subject' autoComplete='off' onChange={handleData}/>
+                        <textarea name="content" placeholder='Message Content' autoComplete='off' onChange={handleData}></textarea>
                         <button><a href={`https://mail.google.com/mail/u/0/?fs=1&to=mhd02fayiz@gmail.com&su=${msgData.subject}&body=${msgData.content}&tf=cm`}>send</a></button>
                       </form>
                     </div>
